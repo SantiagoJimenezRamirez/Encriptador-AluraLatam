@@ -48,7 +48,7 @@ textarea{
     padding-left: 53px;
 }
 
-.buttons input{
+.buttons button{
     width: 350px;
     height: 60px;
     border: solid 3px #001638 ;
@@ -61,7 +61,7 @@ textarea{
 
 }
 
-#¡{
+#recordatorio{
     color: gray;
     font-size: 20px;
 
@@ -108,4 +108,14 @@ footer{
 
 .derechos{
     text-align: center;
+}
+
+/* Responsive Design */
+
+@media (max-width: 57.5em){
+    .all{
+        display: flex;
+        flex-direction: row;
+    }
+
 }
