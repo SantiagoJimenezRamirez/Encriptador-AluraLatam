@@ -26,6 +26,7 @@ function detectarMayuscula() {
     if (/[A-Z]/.test(textareaValor)) {
       // change color re if the condition 
       recordatorio.style.color = 'red';
+      recordatorio.style.fontSize = "30px";
     } else {
       // change color of default
       recordatorio.style.color = 'black';
