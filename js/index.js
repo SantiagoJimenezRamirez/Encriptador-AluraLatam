@@ -11,12 +11,25 @@ function Encriptar(texto) {
 }
 
 const textContainer = document.getElementById("container")
-const textoArea = document.getElementById("texto");
+textoArea = document.getElementById("texto");
+btnEncriptar = document.getElementById("Encri")
+btnDesencriptar = document.getElementById("Desencri")
+recordatorio = document.getElementById("recordatorio")
+ventana = document.getElementById("alert")
+equis = document.getElementById("equis")
 
-const btnEncriptar = document.getElementById("Encri")
-const btnDesencriptar = document.getElementById("Desencri")
-const recordatorio = document.getElementById("recordatorio")
+equis.addEventListener('click', function() {
+  // Obtener la referencia a la ventana
+  var window = document.querySelector('#alert');
+  
+  // Desvanecer la ventana utilizando CSS
+  window.style.opacity = '0';
 
+  // Opcional: eliminar la ventana del DOM después de un retraso
+  setTimeout(function() {
+    window.style.display = 'none';
+  }, 1000); // Desaparece después de 1 segundo (1000 milisegundos)
+});
 
 function detectarMayuscula() {
     // value in textarea
@@ -27,6 +40,8 @@ function detectarMayuscula() {
       // change color re if the condition 
       recordatorio.style.color = 'red';
       recordatorio.style.fontSize = "30px";
+      ventana.style.opacity= "1"
+      
     } else {
       // change color of default
       recordatorio.style.color = 'black';
