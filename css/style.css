@@ -16,7 +16,7 @@ body{
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(100%, 100%);
     padding: 20px;
     border-radius: 30px;
     color: #fff;
@@ -29,6 +29,9 @@ body{
     text-decoration: none;
     left: 0;
     margin-left: 4px;
+}
+#alert > p {
+    padding-top:30px ;
 }
 
 .one{
@@ -74,7 +77,7 @@ textarea{
 }
 
 .buttons button{
-    width: 350px;
+    width: 330px;
     height: 60px;
     border: solid 3px #001638 ;
     border-radius: 20px ;
@@ -86,9 +89,14 @@ textarea{
 
 }
 
+.buttons button:hover{
+    transition: .5s;
+    background:rgb(21, 21, 180) ;
+}
+
 #recordatorio{
     color: gray;
-    font-size: 20px;
+    font-size: 25px;
 
 }
 .two{
@@ -120,6 +128,38 @@ textarea{
     font-size: 20px;
     
 }
+#copiar {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #000000;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #0a1683;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #071fa1;
+    opacity: 0;
+    align-items: center;
+    display: grid;
+    place-items: center;
+    margin-top:-100px ;
+    margin-left: 150px;
+  }
+  
+  #copiar:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #0c0269;
+  }
+  
+  #copiar:active {
+    transform: scale(0.9);
+  }
 
 footer{
     display: block;
@@ -138,9 +178,105 @@ footer{
 /* Responsive Design */
 
 @media (max-width: 57.5em){
-    .all{
-        display: flex;
-        flex-direction: row;
+    
+
+    body{
+        margin: 0;
+    }
+    #alert{
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+        word-wrap: break-word;
+        transform: translate(-80%, -80%);
+    }
+    #alert > img{
+        width: 80px;
+        height: 80px;
+    }
+    #alert #equis img{
+        width: 25px;
+        height: 25px;
     }
 
+    header .logo {
+        margin-left: 20px;
+        margin-top: 20px;
+
+    }
+    .all{
+        display: block;
+        width: 260px;
+        height: auto;
+        margin: 0px;
+        padding: 0px;
+        left: 0px;
+    }
+    .one{
+        width: 260px;
+    }
+    .text_area{
+        padding-left: 10px;
+    }
+    #texto{
+
+        width: 200px;
+        height: 300px;
+        font-size: 20px;
+    }
+    #recordatorio{
+        font-size: 15px;
+    }
+
+    .buttons{
+        padding: 0;
+        display: flex;
+        width: 200px;
+        height: 100px;;
+        padding-left: 20px;
+        
+
+    }
+    .buttons > button{
+        width: 120px;
+        height: 45px;
+        font-size: 15px;
+        margin-right: 0;
+        
+
+    }
+    .two{
+        height: 300px;
+        padding: 0;
+        padding-left: 20;
+        padding-left: 20px;
+
+    }
+    #container{
+        padding: 0;
+        width: 200px;
+        height: 220px;
+        word-wrap: break-word;
+        
+    }
+
+    #container img{
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+    }
+
+    #copiar{
+        margin-top:-80px ;
+        margin-left: 48px;
+    }
+
+    footer{
+        align-items: center;
+        width: 175px;
+    }
+    footer p{
+        padding-left: 20px;
+
+    }
 }
