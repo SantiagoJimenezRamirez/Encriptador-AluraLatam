@@ -22,6 +22,7 @@ body{
     color: #fff;
     border: solid 2px black;
     opacity: 0;
+    word-wrap: break-word;
 }
 
 #alert > a{
@@ -59,7 +60,7 @@ textarea{
 }
 
 #texto{
-    width: 750px;
+    width: 90%;
     height: 350px;
     font-size: 30px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -87,16 +88,19 @@ textarea{
     font-size: 20px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
+
 }
 
 .buttons button:hover{
     transition: .5s;
     background:rgb(21, 21, 180) ;
+    cursor: pointer;
 }
 
 #recordatorio{
     color: gray;
     font-size: 25px;
+    padding-left: 20px;
 
 }
 .two{
@@ -226,6 +230,7 @@ footer{
     }
     #recordatorio{
         font-size: 15px;
+        padding-left: 10px ;
     }
 
     .buttons{
