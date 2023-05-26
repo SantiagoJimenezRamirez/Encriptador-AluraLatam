@@ -6,7 +6,7 @@ btnDesencriptar = document.getElementById("Desencri")
 recordatorio = document.getElementById("recordatorio")
 ventana = document.getElementById("alert")
 equis = document.getElementById("equis")
-buttonCopy=document.getElementById("copiar");
+buttonCopy = document.getElementById("copiar");
 
 function detectarMayuscula() {
   // value in textarea
@@ -17,8 +17,8 @@ function detectarMayuscula() {
     // change color re if the condition 
     recordatorio.style.color = 'red';
     recordatorio.style.fontSize = "30px";
-    ventana.style.opacity= '1';
-    ventana.style.transform= "translate(-50%, -50%)";
+    ventana.style.opacity = '1';
+    ventana.style.transform = "translate(-50%, -50%)";
   } else {
     // change color of default
     recordatorio.style.color = 'gray';
@@ -26,48 +26,49 @@ function detectarMayuscula() {
 }
 
 function Encriptar(texto) {
-  buttonCopy.style.opacity="1"
-  
-    return texto.replace(/e/ig, "enter")
-        .replace(/i/g, "imes")
-        .replace(/a/g, "ai")
-        .replace(/o/g, "ober")
-        .replace(/u/g, "ufat")
+  buttonCopy.style.opacity = "1"
+
+  return texto.replace(/e/g, "enter")
+    .replace(/i/g, "imes")
+    .replace(/a/g, "ai")
+    .replace(/o/g, "ober")
+    .replace(/u/g, "ufat")
 }
 
 
 
-equis.addEventListener('click', function() {
+equis.addEventListener('click', function () {
 
   var window = document.querySelector('#alert');
 
   window.style.opacity = '0';
+  window.style.display = 'none';
 
-  setTimeout(function() {
-    window.style.display = 'none';
-  }); 
 });
 
 btnEncriptar.onclick = function (event) {
-    event.preventDefault()
+  if (detectarMayuscula()){
+    return "Escribe bien los valores"}
+  else{
+    event.preventDefault() 
     textContainer.textContent = Encriptar(textoArea.value)
-    detectarMayuscula();
+  }
 }
 
 // Desencriptado
 function Desencriptar(texto) {
-    return texto.replace(/enter/ig, "e")
-        .replace(/imes/ig, "i")
-        .replace(/ai/ig, "a")
-        .replace(/ober/ig, "o")
-        .replace(/ufat/ig, "u")
+  return texto.replace(/enter/g, "e")
+    .replace(/imes/g, "i")
+    .replace(/ai/g, "a")
+    .replace(/ober/g, "o")
+    .replace(/ufat/g, "u")
 }
 
 
 btnDesencriptar.onclick = function (event) {
-    event.preventDefault()
-    textContainer.textContent = Desencriptar(textoArea.value)
-    detectarMayuscula()
+  event.preventDefault()
+  textContainer.textContent = Desencriptar(textoArea.value)
+  detectarMayuscula()
 }
 
 // copy clipboard
@@ -88,6 +89,6 @@ function copiarTexto() {
 
 buttonCopy.addEventListener('click', copiarTexto);
 
-while (Desencriptar==true){
-  Encriptar==false
+while (Desencriptar == true) {
+  Encriptar == false
 }
