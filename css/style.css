@@ -166,16 +166,19 @@ textarea{
   }
 
 footer{
+    padding-top: 20px;
     display: block;
     height: 50px;
 }
 
 .logos{
+    padding-top: 20px;
     display: flex;
     justify-content: center;
 }
 
 .derechos{
+    padding-top: 20px;
     text-align: center;
 }
 
@@ -277,10 +280,12 @@ footer{
     }
 
     footer{
+        padding-top:20px; 
         align-items: center;
         width: 175px;
     }
     footer p{
+        
         padding-left: 20px;
 
     }

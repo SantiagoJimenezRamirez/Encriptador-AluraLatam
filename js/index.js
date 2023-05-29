@@ -10,6 +10,7 @@ buttonCopy = document.getElementById("copiar");
 
 function detectarMayuscula() {
   // value in textarea
+  
   var textareaValor = document.getElementById('texto').value;
 
   // verify if letter lowerup
@@ -22,6 +23,7 @@ function detectarMayuscula() {
   } else {
     // change color of default
     recordatorio.style.color = 'gray';
+    
   }
 }
 
@@ -38,21 +40,27 @@ function Encriptar(texto) {
 
 
 equis.addEventListener('click', function () {
-
-  var window = document.querySelector('#alert');
-
-  window.style.opacity = '0';
-  window.style.display = 'none';
-
+  ventana.style.opacity = '0';
+  ventana.style.display = 'none';
+  detectarMayuscula = true;
 });
 
+
+
 btnEncriptar.onclick = function (event) {
-  if (detectarMayuscula()){
-    return "Escribe bien los valores"}
-  else{
-    event.preventDefault() 
-    textContainer.textContent = Encriptar(textoArea.value)
+  var textareaValor = document.getElementById('texto').value;
+
+  if (/[A-Z]/.test(textareaValor)) {
+    console.log("No debe encriptar");
+    detectarMayuscula()
+    return
   }
+  else{
+    console.log("Si encripta")
+    event.preventDefault()
+    textContainer.textContent = Encriptar(textoArea.value);
+  }
+  
 }
 
 // Desencriptado
